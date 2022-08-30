@@ -39,6 +39,26 @@ function calcularTriangulo(lado1, lado2, base, altura) {
     };
 };
 
+function calcularAlturaTriangulo(ladosIguales, base) {
+    if (ladosIguales == base) {
+        console.warn('Esto no es un triágulo isoceles équilatero, tontito.');
+    } else {
+        // h = raiz cuadrada (ladosIguales**2 - (base**2) / 4)
+        return Math.sqrt( ( Math.pow(ladosIguales, 2) ) - ( (Math.pow(base, 2)) ) / 4 );
+    };
+};
+
+function calcularAlturaTrianguloEscaleno(lado1, lado2, base) {
+
+    if (lado1 == lado2 || lado1 == base || lado2 == base) {
+        console.warn('Esto no es un triágulo Escaleno, tontito.');
+    } else{
+        const x = (lado1 **2 - lado2 **2 + base **2) / (base * 2);
+        const h = Math.sqrt(lado1 **2 - x**2);
+        return Number(h.toFixed(3));
+    };
+};
+
 console.log({
     ladoTriangulo1,
     ladoTriangulo2,

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como calcular precios con descuentos</title>
+</head>
+
+<style>
+    body{
+        background-color: darkcyan;
+        text-align: center;
+        color: white;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .info-inputs{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-inputs input{
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .info-inputs label{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    input:placeholder-shown{
+        border-color: crimson;
+        text-align: center;
+    }
+
+    .info-inputs button{
+        padding: 10px 20px;
+        background-color: crimson;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 22px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .result{
+        padding: 10px 10px;
+    }
+    
+    .border{
+        border: 5px solid lightseagreen;
+        border-style: dotted;
+    }
+
+    .warning{
+        color: red;
+        background-color: gold;
+        border: 10px solid red;
+        border-style: dashed double dashed;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h1>Como calcular precios con descuentos con JavaScript</h1>
+        <h3>Bienvenido, para saber el descuento de tus boluCompras ingresa los siguientes valores abajo</h3>
+
+        <form id="form">
+            <div class="info-inputs">
+                <label for="price">1. Escriba el precio de su articulo</label>
+                <input id="price" placeholder="Ingrese el precio" type="number"/>
+                <label for="coupon">2. Escriba un cupón</label>
+                <input id="coupon" placeholder="Ingrese el descuento" type="text"/>
+                
+                <button class="button-calculator">Click Here</button>
+
+                <p class="result"></p>
+            </div>
+        </form>
+    </div>
+    <script src="./descuentos.js"></script>
+</body>
+</html>
